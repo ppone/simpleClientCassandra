@@ -25,9 +25,9 @@ public class App
         TTransport tr = new TFramedTransport(new TSocket("localhost", 9160));
         TProtocol proto = new TBinaryProtocol(tr);
         Cassandra.Client client = new Cassandra.Client(proto);
-        tr.open();
-        //ColumnPath path = new ColumnPath("Standard1", null, "name".getBytes("UTF-8"));
+        tr.open(); 
         System.out.println(client);
+        System.out.println(client.describe_cluster_name());
         tr.close();
     }
 }
