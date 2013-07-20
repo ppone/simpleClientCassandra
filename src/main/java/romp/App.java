@@ -34,6 +34,7 @@ public class App
     	}
     	catch(Exception e)
     	{System.out.println(e);}
+    	client.set_keyspace("CadalSec");
         tr.close();
     }
 }
