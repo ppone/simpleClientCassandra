@@ -28,6 +28,12 @@ public class App
         tr.open(); 
         System.out.println(client);
         System.out.println(client.describe_cluster_name());
+        System.out.println(client.describe_version());
+        try{
+        System.out.println(client.system_drop_column_family("parag"));
+    	}
+    	catch(Exception e)
+    	{System.out.println(e);}
         tr.close();
     }
 }
